@@ -1,6 +1,6 @@
 <?php
 
-namespace app\components\queueRedis\widgets\queueManager;
+namespace elmys\yii2\queueRedis\widgets\queueManager;
 
 use yii\base\Widget;
 use yii\data\ArrayDataProvider;

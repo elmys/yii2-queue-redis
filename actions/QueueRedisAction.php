@@ -1,9 +1,9 @@
 <?php
 
-namespace app\components\queueRedis\actions;
+namespace elmys\yii2\queueRedis\actions;
 
-use app\components\queueRedis\models\QueueRedis;
-use app\components\queueRedis\widgets\queueManager\QueueManager;
+use elmys\yii2\queueRedis\models\QueueRedis;
+use elmys\yii2\queueRedis\widgets\queueManager\QueueManager;
 use Throwable;
 use yii\base\Action;
 use yii\base\UserException;

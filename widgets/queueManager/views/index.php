@@ -86,7 +86,7 @@ $this->registerMetaTag(
                 [
                     'format' => 'raw',
                     'value' => function ($model) {
-                        return \yii\helpers\Html::a('Очистить', ['queue-clear', 'qid' => $model['name'], 'layer' => \app\components\queueRedis\actions\QueueRedisAction::$appLayer], ['class' => 'btn btn-outline-primary', 'data' => [
+                        return \yii\helpers\Html::a('Очистить', ['queue-clear', 'qid' => $model['name'], 'layer' => \elmys\yii2\queueRedis\actions\QueueRedisAction::$appLayer], ['class' => 'btn btn-outline-primary', 'data' => [
                             'confirm' => 'Продолжить?',
                             'method' => 'post',
                         ],]);

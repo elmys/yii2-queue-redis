@@ -1,6 +1,6 @@
 <?php
 
-namespace app\components\queueRedis\actions;
+namespace elmys\yii2\queueRedis\actions;
 
 use Throwable;
 use Yii;

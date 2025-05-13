@@ -1,7 +1,6 @@
 <?php
 
-namespace app\components\queueRedis\models;
-
+namespace elmys\yii2\queueRedis\models;
 use yii\base\Model;
 use yii\base\UserException;
 use yii\queue\redis\Queue;
