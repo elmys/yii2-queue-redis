@@ -16,11 +16,6 @@
         "yiisoft/yii2": "~2.0.45"
     },
     "autoload": {
-        "psr-4": {
-            "Ваш\\ПространствоИмен\\": "src/"
-        }
-    },
-    "extra": {
 		"psr-4": {
             "elmys\\yii2\\queueRedis\\": ""
         }

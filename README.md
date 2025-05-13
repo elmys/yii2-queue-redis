@@ -126,10 +126,10 @@ public function actions()
     {
         return array_merge(parent::actions(), [
             'index' => [
-                'class' => 'elmys\queueRedis\actions\QueueRedisAction',
+                'class' => 'elmys\yii2\queueRedis\actions\QueueRedisAction',
             ],
             'queue-clear' => [
-                'class' => 'elmys\queueRedis\actions\QueueRedisCleanAction',
+                'class' => 'elmys\yii2\queueRedis\actions\QueueRedisCleanAction',
             ],
             ...
             'error' => [
