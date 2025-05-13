@@ -104,6 +104,15 @@ $config = [
     'bootstrap' => array_merge(['log'], $queuesBootstrap),
     'components' => [
             'queues' => $queues,
+            ...
+            'i18n' => [
+                        'translations' => [
+                            'queueRedis*' => [
+                                'class' => 'yii\i18n\PhpMessageSource',
+                                'basePath' => '@vendor/elmys/yii2-queue-redis/messages',
+                            ],
+                        ],
+                    ],
     ...
 ```
 
