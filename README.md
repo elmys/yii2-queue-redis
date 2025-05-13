@@ -77,7 +77,7 @@ return [
 - queues-bootstrap.php
 ```php
 <?php
-return array_merge(APP_QUEUES, PS_QUEUES, DS_QUEUES, TS_QUEUES);
+return array_merge(ONE_QUEUES, TWO_QUEUES);
 ```
 
 - queues-local.php
@@ -111,13 +111,13 @@ $config = [
 ```php
 public function init()
     {
-        QueueRedisAction::staticInit();
+        elmys\yii2\queueRedis\actions\QueueRedisAction::staticInit();
         parent::init();
     }
 ```
 4. In your layout you can use current layer-variable, for example:
 ```php
-$layerName = LAYERS[QueueRedisAction::$appLayer] ?? null;
+$layerName = LAYERS[elmys\yii2\queueRedis\actions\QueueRedisAction::$appLayer] ?? null;
 ```
 
 Also, edit your site controller:
@@ -162,18 +162,12 @@ public function actions()
 .admin-queues .badge{
     background-color: #999999;
 }
-.admin-queues .app .badge.filled{
+.admin-queues .one-micro-service .badge.filled{
     background-color: #409600;
 }
-.admin-queues .ps .badge.filled{
+.admin-queues .two-micro-service .badge.filled{
     background-color: #FED74A;
     color: #000000;
-}
-.admin-queues .ds .badge.filled{
-    background-color: #900052;
-}
-.admin-queues .ts .badge.filled{
-    background-color: #FF7123;
 }
 ```
 
