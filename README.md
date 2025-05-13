@@ -1,6 +1,9 @@
 # yii2-queue-redis
 Quick deployment of an interface for easy work with queues based on Redis for Yii2
 
+![chrome_C0woYqkBVf](https://github.com/user-attachments/assets/054c3afa-6702-4a5a-be66-431fa7e65d63)
+
+
 Installation
 -
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
