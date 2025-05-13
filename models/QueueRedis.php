@@ -16,7 +16,7 @@ class QueueRedis extends Model
         foreach ($inputQueue as $queue) {
             $currentQueue = \Yii::$app->{$queue};
             if (!$currentQueue instanceof Queue) {
-                throw new UserException(\Yii::t('app', 'Queue {queue} is not instance of Redis'), ['queue' => $queue]);
+                throw new UserException(\Yii::t('queueRedis', 'Queue {queue} is not instance of Redis'), ['queue' => $queue]);
             }
             $prefix = $currentQueue->channel;
             $waiting = $currentQueue->redis->llen("$prefix.waiting");

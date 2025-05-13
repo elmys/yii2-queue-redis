@@ -23,7 +23,7 @@ class QueueRedisCleanAction extends Action
             $currentQueue = \Yii::$app->{$qid};
             $currentQueue->clear();
         } catch (\Exception $e) {
-            \Yii::$app->session->setFlash('error', \Yii::t('app', 'Failed to clear queue') . $e->getMessage() . $qid);
+            \Yii::$app->session->setFlash('error', \Yii::t('queueRedis', 'Failed to clear queue') . $e->getMessage() . $qid);
         }
         return Yii::$app->response->redirect(\Yii::$app->request->referrer);
     }
