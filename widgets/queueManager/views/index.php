@@ -51,7 +51,7 @@ $this->registerMetaTag(
             },
             'columns' => [
                 [
-                    'label' => 'Наименование',
+                    'label' => \Yii::t('app', 'Queue name'),
                     'format' => 'raw',
                     'value' => function ($model) {
                         //return '<a href="#" class="q-name" title="Кликните для копирования key name (Red Insight)">' . $model['name'] . '.*</a>' . '&nbsp<span class="badge badge-sm filled">' . $model['group'] . '</span>';
@@ -59,25 +59,25 @@ $this->registerMetaTag(
                     }
                 ],
                 [
-                    'label' => 'Всего',
+                    'label' => \Yii::t('app', 'Total'),
                     'value' => 'total',
                 ],
                 [
-                    'label' => 'Отложено',
+                    'label' => \Yii::t('app', 'Postponed'),
                     'format' => 'raw',
                     'value' => function ($model) {
                         return '<span class="badge badge-sm ' . ($model['delayed'] != '0' ? 'filled' : '') . '">' . $model['delayed'] . '</span>';
                     },
                 ],
                 [
-                    'label' => 'Зарезервировано',
+                    'label' => \Yii::t('app', 'Reserved'),
                     'format' => 'raw',
                     'value' => function ($model) {
                         return '<span class="badge badge-sm ' . ($model['reserved'] != '0' ? 'filled' : '') . '">' . $model['reserved'] . '</span>';
                     },
                 ],
                 [
-                    'label' => 'В ожидании',
+                    'label' => \Yii::t('app', 'Waiting'),
                     'format' => 'raw',
                     'value' => function ($model) {
                         return '<span class="badge badge-sm ' . ($model['waiting'] != '0' ? 'filled' : '') . '">' . $model['waiting'] . '</span>';
@@ -86,8 +86,8 @@ $this->registerMetaTag(
                 [
                     'format' => 'raw',
                     'value' => function ($model) {
-                        return \yii\helpers\Html::a('Очистить', ['queue-clear', 'qid' => $model['name'], 'layer' => \elmys\yii2\queueRedis\actions\QueueRedisAction::$appLayer], ['class' => 'btn btn-outline-primary', 'data' => [
-                            'confirm' => 'Продолжить?',
+                        return \yii\helpers\Html::a(\Yii::t('app', 'Clean Up'), ['queue-clear', 'qid' => $model['name'], 'layer' => \elmys\yii2\queueRedis\actions\QueueRedisAction::$appLayer], ['class' => 'btn btn-outline-primary', 'data' => [
+                            'confirm' => \Yii::t('app', 'Continue?'),
                             'method' => 'post',
                         ],]);
                     }

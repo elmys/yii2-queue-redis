@@ -50,7 +50,7 @@ const ALL_QUEUES = [
     'two-micro-service' =>  TWO_QUEUES,    
 ];
 ```
-Define layers for yii-environment. It can be used for switch DB on redis. You can write any digits from 0 to 9;
+Define layers for yii-environment. It can be used for switch DB on redis, just adding `?layer=0` to url. You can write any digits from 0 to 9;
 Separated constants with queue names need for stylizing with css and visual usefully.
 
 2. Add bellow files and import it to main config on import block `web.php`:
@@ -176,3 +176,5 @@ public function actions()
     background-color: #FF7123;
 }
 ```
+
+6. Done.
